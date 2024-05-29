@@ -18,5 +18,8 @@
     "ethers": "^6.12.1",
     "hardhat": "^2.22.4",
     "hardhat-deploy": "^0.12.4"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.7.2"
   }
 }
