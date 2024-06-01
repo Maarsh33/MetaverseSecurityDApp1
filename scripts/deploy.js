@@ -1,26 +1,25 @@
-const hre = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
-  const IdentityManagement = await hre.ethers.getContractFactory(
-    "IdentityManagement"
+  const [deployer] = await ethers.getSigners();
+
+  console.log("Deploying contracts with the account:", deployer.address);
+
+  const IdentityAndAccessManagement = await ethers.getContractFactory(
+    "IdentityAndAccessManagement"
   );
-  const identityManagement = await IdentityManagement.deploy(); // Use 'await' here
+  const identityAndAccessManagement =
+    await IdentityAndAccessManagement.deploy();
 
-  // No need to call `.deployed()` explicitly
-
-  console.log("IdentityManagement deployed to:", identityManagement.address);
-
-  const AccessManagement = await hre.ethers.getContractFactory(
-    "AccessManagement"
+  console.log(
+    "IdentityAndAccessManagement address:",
+    identityAndAccessManagement.address
   );
-  const accessManagement = await AccessManagement.deploy(); // Use 'await' here
-
-  // No need to call `.deployed()` explicitly
-
-  console.log("AccessManagement deployed to:", accessManagement.address);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

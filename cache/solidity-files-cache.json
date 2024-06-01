@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/maryam/MetaverseSecurityDApp1/contracts/AccessManagement.sol": {
-      "lastModificationDate": 1716389327730,
-      "contentHash": "494cb3b23e04aba19de6c0bfb87fd00f",
-      "sourceName": "contracts/AccessManagement.sol",
+    "/home/maryam/MetaverseSecurityDApp1/contracts/IdentityAndAccessManagement.sol": {
+      "lastModificationDate": 1717064465678,
+      "contentHash": "1213a619c477661414501e89e55a45fd",
+      "sourceName": "contracts/IdentityAndAccessManagement.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -33,42 +33,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "AccessManagement"
-      ]
-    },
-    "/home/maryam/MetaverseSecurityDApp1/contracts/IdentityManagement.sol": {
-      "lastModificationDate": 1716389337650,
-      "contentHash": "6fb4f18a1e89897db5d30640f4100e80",
-      "sourceName": "contracts/IdentityManagement.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IdentityManagement"
+        "IdentityAndAccessManagement"
       ]
     }
   }
